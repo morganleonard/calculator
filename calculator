@@ -1,0 +1,52 @@
+#! /usr/bin/env node
+
+var commander = require('commander');
+
+commander
+  .version('0.0.1')
+
+  .option('plus', 'add two values')
+
+  .option('-+, --plus', 'add two values')
+  .option('--minus', 'subtract two values')
+  .option('-*, --times', 'multiply two values')
+  .option('-/, --over', 'divide two values')
+
+  .parse(process.argv);
+
+  var numOne = process.argv[2];
+  var numTwo = process.argv[4];
+  var result = 0;
+
+  if (commander.plus)
+  {
+    result = numOne + numTwo;
+  }
+/*
+  else if (commander.minus)
+  {
+    result = numOne - numTwo;
+  }
+
+  else if (commander.times)
+  {
+    result = numOne * numTwo;
+  }
+
+  else if (commander.over)
+  {
+    result = numOne / numTwo;
+  }
+
+  else if
+  {
+    console.log("unrecognized operation");
+  }
+*/
+
+console.log("numOne = " + numOne);
+console.log("numTwo = " + numTwo);
+console.log(process.argv);
+console.log(program.argv);
+
+console.log("= " + result);
