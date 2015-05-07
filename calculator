@@ -7,7 +7,7 @@ commander
 
   .option('+, plus', 'add two values')
   .option('-, minus', 'subtract two values')
-  .option('*, times', 'multiply two values')
+  .option('x, times', 'multiply two values')
   .option('/, over', 'divide two values')
 
   .parse(process.argv);
@@ -37,14 +37,12 @@ commander
   }
 
 /*
-  else if
-    console.log("unrecognized operation");
-*/
-
+//debugging output
 
 console.log("numOne = " + numOne);
 console.log("numTwo = " + numTwo);
 console.log(process.argv);
 console.log(commander.args);
+*/
 
 console.log("= " + result);
